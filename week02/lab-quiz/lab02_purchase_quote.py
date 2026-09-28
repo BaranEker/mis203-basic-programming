@@ -1,0 +1,25 @@
+itemname1 = input("Enter the item name: ")
+quantity1 = int(input("Enter the quantities: "))
+price1 = float(input("Enter the price"))
+itemname2 = input("Enter the item name: ")
+quantity2 = int(input("Enter the quantities: "))
+price2 = float(input("Enter the price"))
+delivery = float(input("Enter the delivery fee"))
+tax = float(input("Enter the tax percentage"))
+print(f"Product : {itemname1}")
+print(f"Quantity : {quantity1}")
+print(f"Price : {price1:.2f}")
+print(f"Product : {itemname2}")
+print(f"Quantity : {quantity2}")
+print(f"Price  : {price2:.2f}")
+line1_total = quantity1 * price1
+line2_total = quantity2 * price2
+subtotal = line1_total + line2_total
+tax_amount = subtotal * (tax / 100)
+final_total = subtotal + tax_amount + delivery 
+print(f"price of the first product : {line1_total:.2f}")
+print(f"price of the second product : {line2_total:.2f}")
+print(f"Subtotal : {subtotal:.2f}")
+print(f"Delivery fee: {delivery:.2f}")
+print(f"Tax amount : {tax_amount:.2f}")
+print(f"Final total price : {final_total:.2f} TRY")
